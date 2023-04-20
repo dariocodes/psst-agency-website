@@ -245,7 +245,15 @@ form > button {
 #logo2 {
   display: none;
 }
+footer {
+  color: white;
+}
 
+#instasection {
+  font-size: 5vw;
+  color: var(--main);
+  padding: 0 5% 0 5%;
+}
 @media only screen and (min-width: 550px) {
   header {
     background-color: white;
