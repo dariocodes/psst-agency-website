@@ -18,12 +18,12 @@ header {
 }
 
 #hamburger {
-  width: 36px;
+  width: 10vw;
   margin: 10px 40px 0 0;
 }
 
 #logo {
-  width: 100px;
+  width: 25vw;
   margin: 10px 0px 0px 10px;
 }
 
@@ -47,32 +47,37 @@ main::before {
   z-index: -1;
 }
 
+.desktopbtn {
+  display: none;
+}
+
 h1 {
-  font-size: 1.3em;
+  font-size: 5vw;
   margin: 0;
   color: white;
   font-weight: 600;
   margin-top: 20px;
 }
 
-main > div {
+#mobilehero {
   margin-top: 10%;
   display: flex;
   justify-content: space-between;
   align-items: start;
 }
 
-main > div > img {
+#mobilehero > img {
   object-fit: cover;
   aspect-ratio: 2/3;
   width: 55%;
   border-radius: 12px;
 }
 
-main > div > button {
+#mobilehero > button,
+.desktopbtn {
   font-family: "Poppins", sans-serif;
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 4vw;
   color: var(--main);
   background-color: white;
   border: none;
@@ -82,7 +87,8 @@ main > div > button {
   transition: 0.3s;
 }
 
-main > div > button:hover {
+#mobilehero > button:hover,
+.desktopbtn:hover {
   background: none;
   border: 4px solid white;
   cursor: pointer;
@@ -91,30 +97,32 @@ main > div > button:hover {
 }
 
 #aboutus {
-  margin-top: -30%;
+  margin-top: -40%;
   margin-bottom: 20%;
 }
 
 h2 {
   margin-left: 10%;
   color: var(--main);
-  font-size: 1.3em;
+  font-size: 7vw;
 }
 
 #aboutus div {
   display: flex;
   justify-content: space-around;
-  align-items: center;
+
+  padding: 0 5% 0 5%;
+  gap: 5%;
 }
 
 #aboutus img {
   max-width: 40%;
   border-radius: 12px;
+  object-fit: cover;
 }
 
 #aboutus p {
-  font-size: 0.7em;
-  width: 36%;
+  font-size: 4vw;
   margin: 0;
   margin-right: 20px;
 }
@@ -132,6 +140,7 @@ h2 {
 }
 
 h3 {
+  font-size: 7vw;
   font-weight: 600;
 }
 
@@ -145,6 +154,7 @@ h3 {
   justify-content: center;
   align-items: center;
   font-weight: 600;
+  font-size: 4vw;
   border-radius: 20px;
 }
 
@@ -154,7 +164,7 @@ h3 {
   background: none;
   border: 3px solid white;
   border-radius: 8px;
-  font-size: 1.1em;
+  font-size: 4vw;
   height: 2.5em;
   margin: 20px;
 }
@@ -168,13 +178,14 @@ h3 {
 }
 
 h5 {
-  font-size: 1.3em;
+  font-size: 7vw;
 }
 
 #contact input,
 textarea,
 button {
   display: block;
+  font-size: 4vw;
 }
 
 form {
@@ -226,8 +237,115 @@ form > button {
   border: none;
   height: 2.3em;
   border-radius: 12px;
-
-  font-size: 15px;
+  padding: 0 1vw 0 1vw;
   font-weight: bold;
   text-align: center;
+}
+
+#logo2 {
+  display: none;
+}
+
+@media only screen and (min-width: 550px) {
+  header {
+    background-color: white;
+    padding: 0.5% 5% 0.5% 5%;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  #logo {
+    display: none;
+  }
+
+  #logo2 {
+    display: block;
+    width: 7.5vw;
+  }
+
+  main::before {
+    display: none;
+  }
+
+  main {
+    background-color: var(--main);
+    padding: 2% 0 2% 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+  }
+
+  #mobilehero {
+    justify-content: center;
+    margin-top: 0;
+  }
+
+  h1 {
+    font-size: 2.5vw;
+    margin-bottom: 10%;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 3vw;
+  }
+
+  #aboutus {
+    margin: 0;
+  }
+
+  #aboutus img {
+    max-width: 30vw;
+  }
+
+  #aboutus div {
+    align-items: center;
+  }
+
+  #aboutus p {
+    font-size: 1.8vw;
+    max-width: 40vw;
+  }
+
+  #mobilehero > button {
+    display: none;
+  }
+  #mobilehero > img {
+    width: 25vw;
+  }
+
+  .desktopbtn {
+    display: block;
+    font-size: 1.7vw;
+  }
+
+  #desktophero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+
+  #services-container {
+    max-width: 50vw;
+    margin-top: 5%;
+  }
+  .serviceContainer {
+    font-size: 1.7vw;
+  }
+
+  #services-container > button {
+    font-size: 1.7vw;
+  }
+
+  #contact input,
+  textarea,
+  button {
+    font-size: 1.7vw;
+  }
 }
