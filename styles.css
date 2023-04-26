@@ -1,191 +1,215 @@
 :root {
   --main: #765fde;
+  --background: #fffbf2;
+}
+
+@font-face {
+  font-family: "Franklin";
+  src: url(FranklinGothicCondensed.ttf) format("truetype");
+}
+
+.custom-shape-divider-bottom-1682432009 {
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1682432009 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 150px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1682432009 .shape-fill {
+  fill: #fffbf2;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+  .custom-shape-divider-bottom-1682432009 svg {
+    width: calc(100% + 1.3px);
+    height: 150px;
+  }
+}
+
+p,
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  word-spacing: -5%;
+  font-family: "Franklin", sans-serif;
+  background-color: var(--background);
 }
 
 header {
-  background-color: var(--main);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-#hamburger {
-  width: 10vw;
-  margin: 10px 40px 0 0;
+  background: var(--main);
 }
 
 #logo {
-  width: 25vw;
-  margin: 10px 0px 0px 10px;
+  max-width: 80px;
 }
 
 main {
-  margin-top: -5px;
-  padding: 20px 15px 20px 20px;
+  background-color: var(--main);
+  color: white;
+  margin-top: -1%;
+  padding: 40px 40px 10px 40px;
   position: relative;
   overflow: hidden;
-  height: 75vh;
-}
-
-main::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: 120vw;
-  height: 100%;
-  transform: translate(-50%, -50%) rotate(-30deg) skew(-30deg);
-  background: var(--main);
-  z-index: -1;
-}
-
-.desktopbtn {
-  display: none;
+  height: 60vh;
 }
 
 h1 {
-  font-size: 5vw;
-  margin: 0;
-  color: white;
-  font-weight: 600;
-  margin-top: 20px;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 46px;
 }
 
-#mobilehero {
-  margin-top: 10%;
-  display: flex;
-  justify-content: space-between;
-  align-items: start;
-}
-
-#mobilehero > img {
-  object-fit: cover;
-  aspect-ratio: 2/3;
-  width: 55%;
-  border-radius: 12px;
-}
-
-#mobilehero > button,
-.desktopbtn {
+main button {
   font-family: "Poppins", sans-serif;
-  font-weight: bold;
-  font-size: 4vw;
-  color: var(--main);
+  font-weight: 700;
   background-color: white;
   border: none;
-  height: 2.5em;
-  border-radius: 6px;
-  margin-top: 20px;
-  transition: 0.3s;
+  font-size: 21px;
+  padding: 7px 14px 7px 14px;
+  color: var(--main);
+  margin-top: 30px;
 }
-
-#mobilehero > button:hover,
-.desktopbtn:hover {
-  background: none;
-  border: 4px solid white;
-  cursor: pointer;
-  color: white;
-  transition: 0.3s;
-}
-
-#aboutus {
-  margin-top: -40%;
-  margin-bottom: 20%;
+#about-us {
+  padding: 0 40px;
 }
 
 h2 {
-  margin-left: 10%;
+  text-align: start;
   color: var(--main);
-  font-size: 7vw;
 }
-
-#aboutus div {
+#about-us {
   display: flex;
-  justify-content: space-around;
-
-  padding: 0 5% 0 5%;
-  gap: 5%;
+  justify-content: center;
+  align-items: end;
+  gap: 20px;
+  max-height: 400px;
 }
-
-#aboutus img {
-  max-width: 40%;
-  border-radius: 12px;
+#about-us-img {
+  border-radius: 3000px;
+  flex: 1;
+  max-height: 150px;
+  max-width: 150px;
   object-fit: cover;
 }
 
-#aboutus p {
-  font-size: 4vw;
-  margin: 0;
-  margin-right: 20px;
-}
-
-#services-container {
-  background-color: var(--main);
+#about-us-column {
+  flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 80%;
-  margin: 5vh auto;
-  color: white;
-  border-radius: 12px;
+  align-items: start;
+}
+
+#about-us-column p {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  padding: 0;
+  margin: 0;
+}
+
+#services {
+  padding: 60px 40px 0 40px;
 }
 
 h3 {
-  font-size: 7vw;
-  font-weight: 600;
+  text-align: start;
+  color: var(--main);
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
-.serviceContainer {
-  background-color: white;
-  color: var(--main);
-  margin-bottom: 10px;
-  width: 70%;
-  height: 4vh;
+.service-img {
+  aspect-ratio: 1/1;
+  max-width: 150px;
+  object-fit: cover;
+}
+
+.container-service-left {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-weight: 600;
-  font-size: 4vw;
-  border-radius: 20px;
+  gap: 20px;
+  margin-bottom: 50px;
 }
 
-#services-container > button {
-  font-weight: bold;
-  color: white;
+.service-title {
+  font-family: "Franklin";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 125%;
+  letter-spacing: -0.04em;
+}
+
+.service-desc {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 10px 0px 10px 0px;
+}
+
+.service-btn {
+  font-family: "Poppins", sans-serif;
   background: none;
-  border: 3px solid white;
-  border-radius: 8px;
-  font-size: 4vw;
-  height: 2.5em;
-  margin: 20px;
+  border: 3px solid var(--main);
+  color: var(--main);
+  font-weight: 700;
+}
+
+#instasection {
+  padding: 40px;
+}
+
+h4 {
+  text-align: start;
+  color: var(--main);
+  font-size: 1.5em;
+  margin-bottom: 20px;
+}
+
+h5 {
+  text-align: center;
+  color: black;
+  font-size: 1.5em;
+  margin-bottom: 20px;
 }
 
 #contact {
+  margin-top: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--main);
-}
-
-h5 {
-  font-size: 7vw;
 }
 
 #contact input,
 textarea,
 button {
   display: block;
-  font-size: 4vw;
 }
 
 form {
@@ -193,7 +217,6 @@ form {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 60vw;
 }
 
 input {
@@ -206,21 +229,15 @@ textarea {
   padding: none;
 }
 
-footer {
-  margin-top: 5em;
-  height: 100px;
-  background-color: var(--main);
-}
-
 input,
 textarea {
   width: 100%;
-  height: 2em;
+
   border: none;
   box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.345);
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.345);
   -webkit-appearance: none;
-  border-radius: 12px;
+
   font-family: "Poppins", sans-serif;
   padding: 4px 0 4px 8px;
   font-weight: 600;
@@ -235,125 +252,18 @@ form > button {
   background-color: var(--main);
   color: white;
   border: none;
-  height: 2.3em;
-  border-radius: 12px;
-  padding: 0 1vw 0 1vw;
+  font-size: 16px;
+  padding: 0.5em 1em 0.5em 1em;
   font-weight: bold;
   text-align: center;
+  margin-bottom: 40px;
 }
 
-#logo2 {
-  display: none;
-}
 footer {
+  background-color: var(--main);
   color: white;
-}
-
-#instasection {
-  font-size: 5vw;
-  color: var(--main);
-  padding: 0 5% 0 5%;
-}
-@media only screen and (min-width: 550px) {
-  header {
-    background-color: white;
-    padding: 0.5% 5% 0.5% 5%;
-  }
-
-  #hamburger {
-    display: none;
-  }
-
-  #logo {
-    display: none;
-  }
-
-  #logo2 {
-    display: block;
-    width: 7.5vw;
-  }
-
-  main::before {
-    display: none;
-  }
-
-  main {
-    background-color: var(--main);
-    padding: 2% 0 2% 0;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: auto;
-  }
-
-  #mobilehero {
-    justify-content: center;
-    margin-top: 0;
-  }
-
-  h1 {
-    font-size: 2.5vw;
-    margin-bottom: 10%;
-  }
-
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-size: 3vw;
-  }
-
-  #aboutus {
-    margin: 0;
-  }
-
-  #aboutus img {
-    max-width: 30vw;
-  }
-
-  #aboutus div {
-    align-items: center;
-  }
-
-  #aboutus p {
-    font-size: 1.8vw;
-    max-width: 40vw;
-  }
-
-  #mobilehero > button {
-    display: none;
-  }
-  #mobilehero > img {
-    width: 25vw;
-  }
-
-  .desktopbtn {
-    display: block;
-    font-size: 1.7vw;
-  }
-
-  #desktophero {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: start;
-  }
-
-  #services-container {
-    max-width: 50vw;
-    margin-top: 5%;
-  }
-  .serviceContainer {
-    font-size: 1.7vw;
-  }
-
-  #services-container > button {
-    font-size: 1.7vw;
-  }
-
-  #contact input,
-  textarea,
-  button {
-    font-size: 1.7vw;
-  }
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
