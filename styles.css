@@ -3,6 +3,12 @@
   --background: #fffbf2;
 }
 
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 @font-face {
   font-family: "Franklin";
   src: url(FranklinGothicCondensed.ttf) format("truetype");
@@ -389,6 +395,22 @@ footer {
   form > button {
     margin-bottom: 100px;
   }
+
+  .container-service-right.hidden {
+    transform: translateX(-500px);
+  }
+
+  .container-service-right.show {
+    transform: translateX(0px);
+  }
+
+  .container-service-left.hidden {
+    transform: translateX(500px);
+  }
+
+  .container-service-left.show {
+    transform: translateX(0px);
+  }
 }
 
 .hidden {
@@ -401,7 +423,7 @@ footer {
 }
 
 .container-service-right.hidden {
-  transform: translateX(-500px);
+  transform: translateX(-100px);
 }
 
 .container-service-right.show {
@@ -409,7 +431,7 @@ footer {
 }
 
 .container-service-left.hidden {
-  transform: translateX(500px);
+  transform: translateX(100px);
 }
 
 .container-service-left.show {
