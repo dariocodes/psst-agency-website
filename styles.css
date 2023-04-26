@@ -90,6 +90,14 @@ main button {
   padding: 7px 14px 7px 14px;
   color: var(--main);
   margin-top: 30px;
+  transition: 0.3s;
+}
+
+main button:hover {
+  background: none;
+  border: 3px solid white;
+  color: white;
+  transition: 0.3s;
 }
 #about-us {
   padding: 0 40px;
@@ -157,7 +165,13 @@ h3 {
   gap: 20px;
   margin-bottom: 50px;
 }
-
+.container-service-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 50px;
+}
 .service-title {
   font-family: "Franklin";
   font-style: normal;
@@ -181,6 +195,13 @@ h3 {
   border: 3px solid var(--main);
   color: var(--main);
   font-weight: 700;
+  transition: 0.3s;
+}
+
+.service-btn:hover {
+  background-color: var(--main);
+  color: white;
+  transition: 0.3s;
 }
 
 #instasection {
@@ -261,8 +282,14 @@ form > button {
   font-weight: bold;
   text-align: center;
   margin-bottom: 40px;
+  transition: 0.3s;
 }
-
+form > button:hover {
+  background: none;
+  border: 3px solid var(--main);
+  color: var(--main);
+  transition: 0.3s;
+}
 footer {
   background-color: var(--main);
   color: white;
@@ -362,4 +389,29 @@ footer {
   form > button {
     margin-bottom: 100px;
   }
+}
+
+.hidden {
+  opacity: 0;
+  transition: all 1s;
+}
+
+.show {
+  opacity: 1;
+}
+
+.container-service-right.hidden {
+  transform: translateX(-500px);
+}
+
+.container-service-right.show {
+  transform: translateX(0px);
+}
+
+.container-service-left.hidden {
+  transform: translateX(500px);
+}
+
+.container-service-left.show {
+  transform: translateX(0px);
 }

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Psst Agency</title>
     <link rel="stylesheet" href="styles.css" />
+    <script defer src="app.js"></script>
   </head>
   <body>
     <header>
@@ -29,7 +30,7 @@
         </svg>
       </div>
     </main>
-    <section id="about-us">
+    <section id="about-us" class="hidden">
       <img
         id="about-us-img"
         src="img/5M1A4527-bewerkt-2.jpg"
@@ -43,9 +44,9 @@
         </p>
       </div>
     </section>
-    <section id="services">
+    <section id="services" class="hidden">
       <h3>Services</h3>
-      <div class="container-service-left">
+      <div class="container-service-left hidden">
         <img
           class="service-img"
           src="/img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG"
@@ -57,7 +58,7 @@
           <button class="service-btn">LEARN MORE</button>
         </div>
       </div>
-      <div class="container-service-left">
+      <div class="container-service-right hidden">
         <div>
           <p class="service-title">| Brand activation</p>
           <p class="service-desc">Lorem ipsum dolor sit amet, consectetur</p>
@@ -69,7 +70,7 @@
           alt="Catering Image"
         />
       </div>
-      <div class="container-service-left">
+      <div class="container-service-left hidden">
         <img
           class="service-img"
           src="/img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG"
@@ -81,7 +82,7 @@
           <button class="service-btn">LEARN MORE</button>
         </div>
       </div>
-      <div class="container-service-left">
+      <div class="container-service-right hidden">
         <div>
           <p class="service-title">| Hospitality staff</p>
           <p class="service-desc">Lorem ipsum dolor sit amet, consectetur</p>
@@ -93,7 +94,7 @@
           alt="Catering Image"
         />
       </div>
-      <div class="container-service-left">
+      <div class="container-service-left hidden">
         <img
           class="service-img"
           src="/img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG"
@@ -105,7 +106,7 @@
           <button class="service-btn">LEARN MORE</button>
         </div>
       </div>
-      <div class="container-service-left">
+      <div class="container-service-right hidden">
         <div>
           <p class="service-title">| Fitting models</p>
           <p class="service-desc">Lorem ipsum dolor sit amet, consectetur</p>
@@ -118,14 +119,14 @@
         />
       </div>
     </section>
-    <section id="instasection">
+    <section id="instasection" class="hidden">
       <h4>Check out our work on Instagram</h4>
       <div>
         <figure data-behold-id="jt8taSTPeYk8sM59Uixo"></figure>
         <script src="https://w.behold.so/widget.js" type="module"></script>
       </div>
     </section>
-    <section id="contact">
+    <section id="contact" class="hidden">
       <h5>Contact us</h5>
       <form action="">
         <input type="text" placeholder="Name" />
