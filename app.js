@@ -1,5 +1,4 @@
 const hiddenElements = document.querySelectorAll(".hidden");
-console.log(hiddenElements);
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -27,5 +26,3 @@ hamburger.addEventListener("click", () => {
   ul.classList.toggle("openmobile");
   li.forEach((li) => li.classList.toggle("mobile"));
 });
-
-console.log(ul);
