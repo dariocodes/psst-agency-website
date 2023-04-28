@@ -60,10 +60,31 @@ body {
   box-sizing: border-box;
   font-family: "Franklin", sans-serif;
   background-color: var(--background);
+  position: relative;
 }
 
 header {
   background: var(--main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 24px 0 24px;
+}
+
+ul {
+  list-style: none;
+  display: none;
+}
+
+li {
+  color: white;
+  display: inline;
+  margin-right: 30px;
+}
+
+li:hover {
+  text-decoration: underline;
+  cursor: pointer;
 }
 
 #logo {
@@ -306,9 +327,50 @@ footer {
   align-items: center;
 }
 
+.menu {
+  cursor: pointer;
+}
+
+.stripe {
+  margin-bottom: 2px;
+  background-color: white;
+  height: 3px;
+  border-radius: 2px;
+  transition: 0.3s;
+}
+
+.stripe1 {
+  width: 30px;
+}
+
+.open {
+  transform: rotate(90deg);
+  margin-bottom: 0px;
+  background-color: red;
+}
+
+.open2 {
+  transform: rotate(-90deg);
+  margin-bottom: 0px;
+  background-color: red;
+}
+
+.stripe2 {
+  margin-left: 10px;
+  width: 20px;
+}
+
 @media only screen and (min-width: 550px) {
   header {
     padding: 10px 60px 10px 60px;
+  }
+
+  ul {
+    display: block;
+  }
+
+  .menu {
+    display: none;
   }
   main {
     display: flex;
