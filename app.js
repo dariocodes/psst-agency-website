@@ -24,5 +24,18 @@ hamburger.addEventListener("click", () => {
   stripe1.classList.toggle("open");
   stripe2.classList.toggle("open2");
   ul.classList.toggle("openmobile");
-  li.forEach((li) => li.classList.toggle("mobile"));
+  li.forEach((li) => {
+    li.classList.toggle("mobile");
+  });
 });
+
+li.forEach((item) =>
+  item.addEventListener("click", () => {
+    stripe1.classList.toggle("open");
+    stripe2.classList.toggle("open2");
+    ul.classList.toggle("openmobile");
+    li.forEach((li) => {
+      li.classList.toggle("mobile");
+    });
+  })
+);
