@@ -76,6 +76,36 @@ ul {
   display: none;
 }
 
+.openmobile {
+  display: block;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100vw;
+  height: 100vh;
+  z-index: 99;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 0;
+  transition: 0.3s;
+}
+
+.mobile {
+  display: block;
+  color: var(--main);
+  margin-right: 0;
+  margin-bottom: 20px;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
 li {
   color: white;
   display: inline;
@@ -85,6 +115,10 @@ li {
 li:hover {
   text-decoration: underline;
   cursor: pointer;
+}
+
+a {
+  text-decoration: none;
 }
 
 #logo {
@@ -329,6 +363,8 @@ footer {
 
 .menu {
   cursor: pointer;
+  z-index: 200;
+  position: relative;
 }
 
 .stripe {
@@ -337,27 +373,32 @@ footer {
   height: 3px;
   border-radius: 2px;
   transition: 0.3s;
+  z-index: 200;
 }
 
 .stripe1 {
   width: 30px;
+  z-index: 200;
 }
 
 .open {
   transform: rotate(90deg);
   margin-bottom: 0px;
   background-color: red;
+  z-index: 200;
 }
 
 .open2 {
   transform: rotate(-90deg);
   margin-bottom: 0px;
   background-color: red;
+  z-index: 200;
 }
 
 .stripe2 {
   margin-left: 10px;
   width: 20px;
+  z-index: 200;
 }
 
 @media only screen and (min-width: 550px) {
