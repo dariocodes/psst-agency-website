@@ -9,6 +9,13 @@ body {
   overflow-x: hidden;
 }
 
+h2,
+h3,
+h4,
+h5,
+h6 {
+  letter-spacing: 0.5px;
+}
 @font-face {
   font-family: "Franklin";
   src: url(FranklinGothicCondensed.ttf) format("truetype");
@@ -176,7 +183,6 @@ h2 {
   max-height: 400px;
 }
 #about-us-img {
-  border-radius: 3000px;
   flex: 1;
   max-height: 150px;
   max-width: 150px;
@@ -443,7 +449,7 @@ footer {
     padding: 50px 40px 10px 80px;
   }
   #logo {
-    max-width: 100px;
+    max-width: 130px;
   }
 
   #about-us {
@@ -468,7 +474,7 @@ footer {
   }
 
   .service-img {
-    max-width: 250px;
+    max-width: 350px;
   }
 
   .service-title {
