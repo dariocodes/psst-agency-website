@@ -337,21 +337,26 @@ h5 {
   color: black;
   font-size: 1.5em;
   margin-bottom: 20px;
+  z-index: 100;
 }
 
 #contact {
-  margin-top: 40px;
+  padding-top: 40px;
+  margin-top: -1px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   color: var(--main);
+  position: relative;
+  background-color: var(--main);
 }
 
 #contact input,
 textarea,
 button {
   display: block;
+  z-index: 100;
 }
 
 form {
@@ -391,8 +396,8 @@ textarea::placeholder {
 }
 
 form > button {
-  background-color: var(--main);
-  color: white;
+  background-color: white;
+  color: var(--main);
   border: none;
   font-size: 16px;
   padding: 0.5em 1em 0.5em 1em;
@@ -403,8 +408,8 @@ form > button {
 }
 form > button:hover {
   background: none;
-  border: 3px solid var(--main);
-  color: var(--main);
+  border: 3px solid white;
+  color: white;
   transition: 0.3s;
 }
 footer {
@@ -596,4 +601,25 @@ footer {
 
 .container-service-left.show {
   transform: translateX(0px);
+}
+
+.custom-shape-divider-top-1683218812 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+}
+
+.custom-shape-divider-top-1683218812 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 160px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1683218812 .shape-fill {
+  fill: #fffbf2;
 }
