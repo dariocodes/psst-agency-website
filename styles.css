@@ -15,10 +15,11 @@ h4,
 h5,
 h6 {
   letter-spacing: 0.5px;
+  font-size: 48px;
 }
 @font-face {
-  font-family: "Franklin";
-  src: url(FranklinGothicCondensed.ttf) format("truetype");
+  font-family: 'Franklin';
+  src: url(FranklinGothicCondensed.ttf) format('truetype');
 }
 
 .custom-shape-divider-bottom-1682432009 {
@@ -65,7 +66,7 @@ h6 {
 
 body {
   box-sizing: border-box;
-  font-family: "Franklin", sans-serif;
+  font-family: 'Franklin', sans-serif;
   background-color: var(--background);
   position: relative;
 }
@@ -150,7 +151,7 @@ h1 {
 }
 
 main button {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-weight: 700;
   background-color: white;
   border: none;
@@ -167,9 +168,6 @@ main button:hover {
   color: white;
   transition: 0.3s;
 }
-#about-us {
-  padding: 0 40px;
-}
 
 h2 {
   text-align: start;
@@ -180,13 +178,15 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   gap: 20px;
   max-height: 400px;
+  width: 100vw;
+  padding: 0 20px 0 20px;
 }
 #about-us-img {
   flex: 1;
-  max-height: 150px;
-  max-width: 150px;
+  max-width: 40%;
   object-fit: cover;
 }
 
@@ -195,44 +195,38 @@ h2 {
   display: flex;
   flex-direction: column;
   align-items: start;
-  max-width: 500px;
 }
 
 #about-us-column p {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 12px;
-  font-weight: 400;
-  line-height: 18px;
+  font-weight: 300;
+
   padding: 0;
   margin: 0;
 }
 
 #services {
-  padding: 60px 40px 0 40px;
+  padding: 60px 0;
 }
 
 h3 {
   text-align: start;
   color: var(--main);
-  font-size: 1.5em;
 
-  max-width: 70vw;
-  margin: auto auto 30px auto;
+  margin: auto auto 20px 20px;
 }
 
 #catering {
-  background-image: "img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG";
+  background-image: 'img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG';
 }
 
 .container-service-right {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 50px;
   height: 20vh;
-  width: 80vw;
-  background-color: black;
+  width: 100vw;
   position: relative;
 }
 
@@ -240,11 +234,8 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 50px;
   height: 20vh;
-  width: 80vw;
-  background-color: black;
+  width: 100vw;
   position: relative;
 }
 
@@ -252,35 +243,32 @@ h3 {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.6;
+
   background-position: center;
+  flex: 1;
 }
 
+.left-container,
 .right-container {
-  position: absolute;
-  left: 24px;
-  top: 32px;
+  flex: 1;
+  margin-left: 20px;
+  margin-right: -20px;
 }
 
-.left-container {
-  position: absolute;
-  right: 24px;
-  top: 32px;
-}
 .service-title {
-  font-family: "Franklin";
+  font-family: 'Franklin';
   font-weight: 200;
-  font-size: 20px;
+  font-size: 16px;
   letter-spacing: 1px;
-  color: white;
+
   margin-bottom: 10px;
 }
 
 .service-desc {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 9px;
   font-weight: 300;
-  color: white;
+
   max-width: 150px;
 }
 
@@ -291,14 +279,14 @@ h3 {
 h4 {
   text-align: start;
   color: var(--main);
-  font-size: 1.5em;
+
   margin-bottom: 20px;
 }
 
 h5 {
   text-align: center;
   color: black;
-  font-size: 1.5em;
+
   margin-bottom: 20px;
   z-index: 100;
 }
@@ -347,7 +335,7 @@ textarea {
   -webkit-box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.345);
   -webkit-appearance: none;
   appearance: none;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   padding: 8px 0 8px 8px;
   font-weight: 600;
 }
@@ -424,7 +412,19 @@ footer {
   z-index: 200;
 }
 
+#desktop-ul {
+  display: none;
+}
+
 @media only screen and (min-width: 550px) {
+  #desktop-ul {
+    display: block;
+  }
+
+  #mobile-ul {
+    display: none;
+  }
+
   header {
     padding: 10px 60px 10px 60px;
   }
@@ -435,6 +435,10 @@ footer {
 
   .menu {
     display: none;
+  }
+
+  li {
+    font-size: 18px;
   }
   main {
     display: flex;
@@ -449,6 +453,9 @@ footer {
   #about-us {
     align-items: center;
     justify-content: space-around;
+    flex-direction: row;
+    max-width: 50vw;
+    margin: auto;
   }
 
   #about-us-img {
@@ -458,6 +465,7 @@ footer {
 
   h3 {
     margin-top: 40px;
+    text-align: center;
   }
 
   main {
@@ -473,24 +481,17 @@ footer {
   }
 
   h2 {
-    font-size: 2em;
     margin-bottom: 15px;
   }
 
   #about-us-column p {
-    font-size: 16px;
-    line-height: 21px;
+    font-size: 18px;
   }
 
-  h3,
-  h5 {
-    font-size: 2em;
-  }
   .container-service-right,
   .container-service-left {
-    margin: 50px auto;
-    height: 50vh;
-    width: 70vw;
+    margin: auto;
+    height: 60vh;
   }
 
   .service-title {
@@ -506,6 +507,7 @@ footer {
   #instasection {
     padding-left: 200px;
     padding-right: 200px;
+    margin-bottom: 100px;
   }
 
   input,
@@ -579,4 +581,17 @@ footer {
 
 .custom-shape-divider-top-1683218812 .shape-fill {
   fill: #fffbf2;
+}
+
+@media only screen and (max-width: 600px) {
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-size: 1.5em;
+  }
+
+  #about-us-column p {
+    max-width: 90%;
+  }
 }
