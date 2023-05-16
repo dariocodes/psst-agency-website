@@ -7,6 +7,7 @@ html,
 body {
   max-width: 100%;
   overflow-x: hidden;
+  font-size: 14px;
 }
 
 h2,
@@ -130,7 +131,8 @@ a {
 }
 
 #logo {
-  max-width: 80px;
+  max-width: 100px;
+  margin-left: -10px;
 }
 
 main {
@@ -199,7 +201,7 @@ h2 {
 
 #about-us-column p {
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
+
   font-weight: 300;
 
   padding: 0;
@@ -217,19 +219,7 @@ h3 {
   margin: auto auto 20px 20px;
 }
 
-#catering {
-  background-image: 'img/351a28ad-36e8-4da5-b04c-e6812d40c9ad.JPG';
-}
-
-.container-service-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 20vh;
-  width: 100vw;
-  position: relative;
-}
-
+.container-service-right,
 .container-service-left {
   display: flex;
   justify-content: center;
@@ -237,13 +227,13 @@ h3 {
   height: 20vh;
   width: 100vw;
   position: relative;
+  margin-bottom: 20px;
 }
 
 .service-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-
   background-position: center;
   flex: 1;
 }
@@ -258,15 +248,16 @@ h3 {
 .service-title {
   font-family: 'Franklin';
   font-weight: 200;
-  font-size: 16px;
+  font-size: 20px;
   letter-spacing: 1px;
-
   margin-bottom: 10px;
+  overflow-wrap: normal;
+  max-width: 40vw;
 }
 
 .service-desc {
   font-family: 'Poppins', sans-serif;
-  font-size: 9px;
+  font-size: 12px;
   font-weight: 300;
 
   max-width: 150px;
@@ -287,7 +278,7 @@ h5 {
   text-align: center;
   color: black;
 
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   z-index: 100;
 }
 
@@ -588,7 +579,7 @@ footer {
   h3,
   h4,
   h5 {
-    font-size: 1.5em;
+    font-size: 2em;
   }
 
   #about-us-column p {
