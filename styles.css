@@ -178,7 +178,7 @@ h2 {
 }
 #about-us {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
   gap: 20px;
@@ -209,7 +209,7 @@ h2 {
 }
 
 #services {
-  padding: 60px 0;
+  padding: 100px 0 0 0;
 }
 
 h3 {
@@ -227,7 +227,7 @@ h3 {
   height: 20vh;
   width: 100vw;
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 .service-img {
@@ -284,7 +284,7 @@ h5 {
 
 #contact {
   padding-top: 40px;
-  margin-top: -1px;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -466,13 +466,17 @@ footer {
     max-width: 130px;
   }
 
+  .mobile-services {
+    display: none;
+  }
+
   #about-us {
-    padding-left: 250px;
-    padding-right: 250px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   h2 {
-    margin-bottom: 15px;
+    margin-bottom: 40px;
   }
 
   #about-us-column p {
@@ -499,6 +503,7 @@ footer {
     padding-left: 200px;
     padding-right: 200px;
     margin-bottom: 100px;
+    margin-top: 100px;
   }
 
   input,
@@ -584,5 +589,40 @@ footer {
 
   #about-us-column p {
     max-width: 90%;
+  }
+  #about-us-img {
+    display: none;
+  }
+
+  .desktop-services {
+    display: none;
+  }
+
+  .mobile-services > .container-service-right,
+  .container-service-left {
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .mobile-services img {
+    max-height: 40vh;
+  }
+
+  .left-container,
+  .right-container {
+    margin: 50px auto 50px auto;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-title,
+  .service-desc {
+    width: 100%;
+    text-align: center;
+    max-width: 80vw;
   }
 }
