@@ -41,3 +41,11 @@ li.forEach((item) =>
     });
   })
 );
+
+const myForm = document.querySelector('form');
+
+//myForm.onsubmit = (e) => {
+//e.target.submit();
+//e.target.reset();
+//return false;
+//};
