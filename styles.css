@@ -267,8 +267,7 @@ h3 {
   font-family: 'Poppins', sans-serif;
   font-size: 12px;
   font-weight: 300;
-
-  max-width: 150px;
+  padding-bottom: 40px;
 }
 
 #instasection {
@@ -474,8 +473,7 @@ footer {
   }
 
   #about-us {
-    padding-left: 100px;
-    padding-right: 100px;
+    padding: 100px;
   }
 
   h2 {
@@ -499,7 +497,7 @@ footer {
   }
 
   .service-desc {
-    font-size: 18px;
+    font-size: 16px;
     max-width: 40vw;
     color: var(--main);
   }
@@ -593,7 +591,6 @@ footer {
   }
 
   #about-us-column p {
-    max-width: 90%;
     color: var(--main);
   }
   #about-us-img {
