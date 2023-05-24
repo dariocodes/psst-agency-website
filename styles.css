@@ -586,8 +586,28 @@ footer {
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     font-size: 2em;
+  }
+  .mobile-hide {
+    display: none;
+  }
+
+  #logos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 60px;
+  }
+  #logos img {
+    max-width: 80px;
+  }
+  h6 {
+    color: #765fde;
+    text-align: center;
   }
 
   #about-us-column p {
@@ -633,4 +653,24 @@ footer {
   .container-service-left {
     margin-bottom: 0;
   }
+}
+
+#logos {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+#logos img {
+  width: 150px;
+
+  object-fit: contain;
+  mix-blend-mode: multiply;
+}
+
+h6 {
+  text-align: center;
+  color: var(--main);
+  margin-top: 50px;
 }
