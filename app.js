@@ -20,8 +20,6 @@ const stripe2 = document.querySelector('.stripe2');
 const ul = document.getElementById('mobile-ul');
 const li = document.querySelectorAll('.mobile-li');
 
-console.log(li);
-
 hamburger.addEventListener('click', () => {
   stripe1.classList.toggle('open');
   stripe2.classList.toggle('open2');
